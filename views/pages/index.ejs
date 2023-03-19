@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <%- include('../partials/head'); %>
+
+  <body  class="p-5">
+    <%- include('../partials/header'); %>
+
+    <main class="screen-width m-auto mt-4 bg-stone-300 py-9 px-4 rounded-lg">
+      <div>
+        <h2 class="font-bold text-3xl mb-5">Node com EJS</h2>
+        <p class="text-2xl opacity-80 mb-5">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Soluta
+          molestiae sequi deserunt adipisci eveniet minima itaque maiores animi
+          provident nostrum odit, fugiat a qui beatae laudantium blanditiis
+          ratione culpa suscipit?
+        </p>
+
+        <button
+          class="border border-gray-900 border-2 py-2 px-1 rounded-lg hover:border-blue-900 hover:text-blue-900"
+        >
+          Clique-me
+        </button>
+      </div>
+
+      <h2 class="text-2xl font-bold mt-5">Escritores do artigo</h2>
+
+      <ul class="list-disc p-5">
+        <% writers.forEach((writer) => { %>
+          <li><strong><%= writer.name %></strong> - <%= writer.mail %></li>
+        <% }) %>
+      </ul>
+      
+      <%= message %>
+    </main>
+
+    <%- include('../partials/footer'); %>
+  </body>
+</html>
